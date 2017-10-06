@@ -32,7 +32,7 @@ message(${VTK_LIBRARIES})
 SET_SOURCE_FILES_PROPERTIES(ca_smoothing.i PROPERTIES CPLUSPLUS ON)
 #SET_SOURCE_FILES_PROPERTIES(ca_smoothing.i PROPERTIES SWIG_FLAGS "-includeall")
 set(CMAKE_SWIG_OUTDIR ${CMAKE_CURRENT_BINARY_DIR}/lib)
-SWIG_ADD_MODULE(ca_smoothing python ca_smoothing.i ca_smoothing.cxx)
+SWIG_ADD_LIBRARY(ca_smoothing LANGUAGE python SOURCES ca_smoothing.i ca_smoothing.cxx)
 
 message(STATUS "Libraries" ${Libraries})
 
